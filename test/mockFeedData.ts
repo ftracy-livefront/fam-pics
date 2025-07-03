@@ -49,7 +49,7 @@ const post4: Post = {
     ],
     likedBy: null,
     postTime: null,
-        title: "Aurora at Disneyland"
+    title: "Aurora at Disneyland"
 }
 
 const mockFeedData: Feed = {
