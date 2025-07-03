@@ -33,7 +33,7 @@ export default function TabLayout() {
         }),
       }}>
       <Tabs.Screen
-        name="feed"
+        name="index" // this screen/file MUST be named "index" or it won't render properly
         options={{
           title: 'Feed',
           tabBarIcon: ({ size, focused, color }) => {
@@ -41,7 +41,7 @@ export default function TabLayout() {
             return (
               <Image
                 source={homeIconActive}
-                style={{ width: size, height: size }}
+                style={{ width: 55, height: 55 }}
               />
             );
           }        
@@ -56,7 +56,7 @@ export default function TabLayout() {
               return (
                 <Image
                   source={uploadIconActive}
-                  style={{ width: size, height: size }}
+                  style={{ width: 55, height: 55 }}
                 />
               );
         }
