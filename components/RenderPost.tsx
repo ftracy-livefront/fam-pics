@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import Post from "@/interfaces/post";
 
 const RenderPost = ({
@@ -8,12 +9,15 @@ const RenderPost = ({
     likedBy,
     postTime,
     title
-} : Post ) => {
+}: Post) => {
     return (
-        <View>
+        <View style={{ paddingBottom: 20 }}>
+            <Text>Posted by: {author}</Text>
             <Text>{title}</Text>
-            <Text>{id}</Text>
-            <Text>{author}</Text>
+            <Image
+                style={{ height: 350, width: 350 }}
+                source={{ uri: imageUrls[0] }}
+            />
         </View>
     )
 };
