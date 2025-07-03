@@ -8,9 +8,15 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+
 
 export default function UploadScreen() {
     return (
-        <ThemedText type="title">Upload</ThemedText>
+        <SafeAreaProvider>
+            <SafeAreaView>
+                <ThemedText type="title">Upload</ThemedText>
+            </SafeAreaView>
+        </SafeAreaProvider>
     )
 }
